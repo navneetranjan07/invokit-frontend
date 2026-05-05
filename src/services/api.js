@@ -1,9 +1,10 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL,
   headers: { 'Content-Type': 'application/json' },
   timeout: 30000,
+  withCredentials: true, // optional but good
 })
 
 // Attach token to every request
