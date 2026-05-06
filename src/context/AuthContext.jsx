@@ -15,14 +15,14 @@ export function AuthProvider({ children }) {
       return
     }
 
-    api.get('/api/auth/me')
+    api.get('/auth/me')
       .then(res => setUser(res.data.data))
       .catch(() => localStorage.removeItem('invokit_token'))
       .finally(() => setLoading(false))
   }, [])
 
   const login = useCallback(async (email, password) => {
-    const res = await api.post('/api/auth/login', { email, password }) 
+    const res = await api.post('/auth/login', { email, password }) 
 
     const data = res.data.data
 
@@ -37,7 +37,7 @@ export function AuthProvider({ children }) {
   }, [])
 
   const register = useCallback(async (formData) => {
-    const res = await api.post('/api/auth/register', formData) 
+    const res = await api.post('/auth/register', formData) 
 
     const data = res.data.data
 
