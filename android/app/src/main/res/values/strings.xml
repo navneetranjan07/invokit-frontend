@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">InvoKit</string>
+    <string name="title_activity_main">InvoKit</string>
+    <string name="package_name">com.navneet.invokit</string>
+    <string name="custom_url_scheme">com.navneet.invokit</string>
+</resources>
